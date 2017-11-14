@@ -86,6 +86,13 @@ class Aamarpay extends AbstractApi
         return $this;
     }
 
+    /**
+     * Set Product Description
+     *
+     * @param null $description
+     *
+     * @return $this
+     */
     public function product( $description = null )
     {
         $this->params[ 'desc' ] = $description;
@@ -108,6 +115,13 @@ class Aamarpay extends AbstractApi
         return $this;
     }
 
+    /**
+     * Set Currency
+     *
+     * @param string $currency
+     *
+     * @return $this
+     */
     public function currency( $currency = 'BDT' )
     {
         $this->params[ 'currency' ] = $currency;
@@ -118,7 +132,7 @@ class Aamarpay extends AbstractApi
     /**
      * Generate Transactions
      *
-     * @return $this
+     * @return string
      */
     public function generateTransaction()
     {

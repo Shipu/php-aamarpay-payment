@@ -253,12 +253,12 @@ use Shipu\Aamarpay\Facades\Aamarpay;
 
 public function paymentSuccessOrFailed(Request $request)
 {
-    if($request->get('status') == 'CANCELLED') {
+    if($request->get('pay_status') == 'Failed') {
         return redirect()->back();
     }
     
-    $transactionId = $request->get('tran_id');
-    $valid = Payment::valid($request, 3500, $transactionId);
+    $amount = 3500;
+    $valid  = Aamarpay::valid($request, $amount);
     
     if($valid) {
         // Successfully Paid.
