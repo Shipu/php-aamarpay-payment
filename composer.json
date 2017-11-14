@@ -1,0 +1,40 @@
+{
+    "name": "shipu/php-aamarpay-payment",
+    "description": "PHP client for Aamarpay Payment Gateway API",
+    "keywords": ["aamarpay", "php", "api", "gateway", "php-aamarpay", "laravel", "lumen"],
+    "type": "library",
+    "require": {
+        "php": ">=5.5.9",
+        "guzzlehttp/guzzle": "^6.2",
+        "laravelcollective/html": "^5.4.0"
+    },
+
+    "license": "CC(1.0)",
+    "authors": [
+        {
+            "name": "Shipu Ahamed",
+            "email": "shipuahamed01@gmail.com"
+        }
+    ],
+
+    "autoload": {
+        "psr-4": {
+            "Shipu\\Aamarpay\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Shipu\\Aamarpay\\AamarpayServiceProvider"
+            ],
+            "aliases": {
+                "Aamarpay": "Shipu\\Aamarpay\\Facades\\Aamarpay"
+            }
+        }
+    }
+}
