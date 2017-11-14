@@ -1,4 +1,4 @@
-# PHP Aamarpay Payment Client
+# PHP Aamarpay Payment Gateway
 
 php-aamarpay-payment is a PHP client for Aamarpay Payment Gateway API. This package is also support Laravel and Lumen.
 
