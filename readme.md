@@ -193,13 +193,13 @@ Where `$request` will appear after post response.
 
 #### Getting Payment Post Url
 ```php
-{{ ssl_wireless_payment_url() }}
+{{ aamarpay_payment_url() }}
 ```
 
 #### Getting Hidden Input Field
 ```php
 {!!
-    ssl_wireless_hidden_input([
+    aamarpay_hidden_input([
         'tran_id'   => '21005455540', // random number. if you don't set this it will be auto generate.
         'cus_name'  => 'Shipu Ahamed', // Customer name
         'cus_email' => 'shipuahamed01@gmail.com', // Customer email
@@ -208,7 +208,7 @@ Where `$request` will appear after post response.
 !!}
 or
 {!!
-    ssl_wireless_hidden_input([
+    aamarpay_hidden_input([
         'tran_id'   => '21005455540', // random number. if you don't set this it will be auto generate.
         'cus_name'  => 'Shipu Ahamed', // Customer name
         'cus_email' => 'shipuahamed01@gmail.com', // Customer email
@@ -220,7 +220,7 @@ or
 #### Complete Post Button View 
 ```php
 {!! 
-ssl_wireless_post_button([
+aamarpay_post_button([
     'tran_id'   => '21005455540', // random number. if you don't set this it will be auto generate.
     'cus_name'  => 'Shipu Ahamed', // Customer name
     'cus_email' => 'shipuahamed01@gmail.com', // Customer email
