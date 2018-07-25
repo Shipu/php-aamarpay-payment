@@ -12,9 +12,9 @@ class Aamarpay extends AbstractApi
     protected function setBaseUrl()
     {
         if ( config('aamarpay.sandbox') ) {
-            return 'http://sandbox.aamarpay.com/index.php';
+            return 'https://sandbox.aamarpay.com/index.php';
         } else {
-            return 'http://secure.aamarpay.com/index.php';
+            return 'https://secure.aamarpay.com/index.php';
         }
     }
 
