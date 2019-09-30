@@ -4,12 +4,15 @@
     "keywords": ["aamarpay", "php", "api", "gateway", "php-aamarpay", "laravel", "lumen"],
     "type": "library",
     "require": {
-        "php": ">=5.5.9",
+        "php": ">=5.6.4",
         "guzzlehttp/guzzle": "^6.2",
-        "laravelcollective/html": "^5.4.0"
+        "laravelcollective/html": "5.4.0",
+        "vlucas/phpdotenv": "^3.4"
     },
-
-    "license": "CC(1.0)",
+    "require-dev": {
+        "symfony/var-dumper": "^4.3"
+    },
+    "license": "CC-BY-3.0",
     "authors": [
         {
             "name": "Shipu Ahamed",

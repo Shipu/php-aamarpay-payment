@@ -6,10 +6,10 @@ return [
     'sandbox' => env('AAMARPAY_SANDBOX', true),
     'redirect_url' => [
         'success' => [
-            'route' => '' // payment.success
+            'url' => env('AAMARPAY_SUCCESS_URL','') // payment.success
         ],
         'cancel' => [
-            'url' => '' // payment/cancel or you can use route also
+            'url' => env('AAMARPAY_CANCEL_URL','') // payment/cancel or you can use route also
         ]
     ]
 ];

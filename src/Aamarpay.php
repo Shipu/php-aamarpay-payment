@@ -11,7 +11,7 @@ class Aamarpay extends AbstractApi
 
     protected function setBaseUrl()
     {
-        if ( config('aamarpay.sandbox') ) {
+        if ( $this->config['sandbox'] ) {
             return 'https://sandbox.aamarpay.com/index.php';
         } else {
             return 'https://secure.aamarpay.com/index.php';
@@ -245,10 +245,10 @@ class Aamarpay extends AbstractApi
      */
     private function routeOrUrl( $array )
     {
-        if ( isset($array[ 'route' ]) && !is_null($array[ 'route' ]) && $array[ 'route' ] != '' ) {
-            return route($array[ 'route' ]);
+        if (isset($array[ 'route' ]) && !is_null($array[ 'route' ]) && $array[ 'route' ] != '' ) {
+            return function_exists('route') ? route($array[ 'route' ]) : $array[ 'route' ];
         } elseif ( isset($array[ 'url' ]) && !is_null($array[ 'url' ]) && $array[ 'url' ] != '' ) {
-            return url($array[ 'url' ]);
+            return function_exists('url') ? url($array[ 'url' ]) : $array[ 'url' ];
         }
 
         throw new RouteOrUrlNotFound();
