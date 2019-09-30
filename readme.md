@@ -221,10 +221,9 @@ or
 ```php
 {!! 
 aamarpay_post_button([
-    'tran_id'   => '21005455540', // random number. if you don't set this it will be auto generate.
     'cus_name'  => 'Shipu Ahamed', // Customer name
     'cus_email' => 'shipuahamed01@gmail.com', // Customer email
-    'cus_phone' => '01616022669' // Customer Phone
+    'cus_phone' => '01616000000' // Customer Phone
 ], 2000, '<i class="fa fa-money">Payment</i>', 'btn btn-sm btn-success') 
 !!}
 ```
