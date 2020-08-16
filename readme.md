@@ -66,7 +66,7 @@ $payment = new Aamarpay($config);
 
 This package is also support Laravel. For laravel you have to configure it as laravel style.
 
-Go to `app\aamarpay.php` and configure it with your credentials.
+Go to `config\aamarpay.php` and configure it with your credentials.
 
 ```php
 return [
